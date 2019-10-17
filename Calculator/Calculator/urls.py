@@ -21,4 +21,5 @@ urlpatterns = [
     path('', mainPage.index, name='index'),
     path('admin/', admin.site.urls),
     path("evaluated/", include("Evaluated.urls")),
+    path("graphical/", include("Graphical.urls")),
 ]

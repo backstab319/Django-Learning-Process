@@ -7,8 +7,8 @@ class mainPage:
     def index(request):
         index_dict = {
             'head1':'Welcome to the calculator page using Django!',
-            'eval_cal':'Proceed to /evaluated to use the evaluated calculator',
-            'normal_cal':'A normal calculator with interactive buttons will be avalable in the future!',
+            'eval_cal':'Proceed to evaluated calculator using the following link',
+            'normal_cal':'Proceed to graphical calculator using the following link',
         }
         return render(request,'Calculator/index.html',context=index_dict)
 
@@ -28,6 +28,4 @@ class EvaluatedCalculator:
             if form.is_valid():
                 res = eval(form.cleaned_data['expr'])
                 cal_dict["result"] = res
-
-
         return render(request,"Evaluated/index.html",context=cal_dict)

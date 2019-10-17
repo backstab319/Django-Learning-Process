@@ -14,9 +14,13 @@
             </h1>
             <p class="text-center text-mute">
                 {{ eval_cal }}
+                <br>
+                <a class="btn btn-outline-primary" href="{% url 'evaluated' %}">Evaluated Calculator</a>
             </p>
             <p class="text-center text-mute">
                 {{ normal_cal }}
+                <br>
+                <a class="btn btn-outline-primary" href="{% url 'graphical' %}">Graphical Calculator</a>
             </p>
         </div>
     </div>
